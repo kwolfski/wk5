@@ -52,20 +52,22 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   var answer = window.prompt("Who is your favorite author: Churchill, Ghandi, Demosthenes?");
 switch (answer) {
   case "Churchill" :
-    console.log('Churchill was 66 during this speech.')
+    console.log(speechesArray[0].author + "was" + speechesArray[0].authorAge + "during this speech.")
     break;
 
   case "Ghandi" :
-    console.log('Ghandi was 73 during this speech.')
+  console.log(speechesArray[1].author + "was" + speechesArray[1].authorAge + "during this speech.")
     break;
 
   case "Churchill" :
-    console.log('Demosthenes was 42 during this speech.')
+  console.log(speechesArray[2].author + "was" + speechesArray[2].authorAge + "during this speech.")
     break;
-    
-  default: console.log("You rebel!")
+
+  default: console.log("Did you spell the name correctly?")
 }
 });
+
+
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
