@@ -31,9 +31,11 @@ var userName = {
     //When the page loads, use the window.prompt() command to ask for the user’s name. When the user responds, use a conditional to check that the type of the returned value is a string and that it is not equal to a blank string
     //(a blank string in JavaScript is expressed like this “”). If the user has entered a non-blank string, display this in the console: Hi [user’s name]!
 
-window.prompt(Hi [user’s name]!);
-
-
+    if (typeof userName === "string" && userName.length !== 1) {
+      console.log("Hi " + userName + "!");
+    } else {
+      console.log("OK, I'll just call you User.");
+    };
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
