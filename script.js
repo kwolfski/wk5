@@ -69,15 +69,31 @@ switch (answer) {
 
 //When each of the blue navigation buttons are clicked, start by displaying something like this:
   //This speech was written by [author name] in [speech year].
+
+  //Last week we displayed the boolean value for whether the speech took place before the common era. This week we can evaluate that boolean value and display an appropriate message.
+  //Use a conditional to display which ever one of these messages is appropriate in the console:
+  //This speech took place before the common era.
+  //This speech took place during the common era.
+
+
   document.getElementById('BtnChurchill').addEventListener('click', function(){
   console.log("This speech was written by" + speechesArray[0].author + "in" + speechesArray[0].year + ".");
-  });
+
+  if (speechesArray[0].yearIsBCE === true) {
+    console.log("This speech took place before the common era.");
+  }
+  else {
+    console.log("This speech took place during the common era.");
+  }
+});
 
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   console.log("This speech was written by" + speechesArray[1].author + "in" + speechesArray[1].year + ".");
+
 });
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   console.log("This speech was written by" + speechesArray[2].author + "in" + speechesArray[2].year + ".");
+
 });
