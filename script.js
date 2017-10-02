@@ -67,11 +67,14 @@ switch (answer) {
 }
 });
 
+//When each of the blue navigation buttons are clicked, start by displaying something like this:
+  //This speech was written by [author name] in [speech year].
+  document.getElementById('BtnChurchill').addEventListener('click', function(){
+  console.log("This speech was written by" + speechesArray[0].author + "in" + speechesArray[0].year + ".");
+  });
 
 
-document.getElementById('BtnChurchill').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Churchill" button.
-});
+
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
