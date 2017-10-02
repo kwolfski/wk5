@@ -91,10 +91,10 @@ switch (answer) {
   }
 
 //oldest
-  if (speechesArray[0].year < speechesArray[1].year === speechesArray[0].year < speechesArray[2].year) {
+  if (speechesArray[0].year < speechesArray[1].year && speechesArray[0].year < speechesArray[2].year) {
     console.log("This is the oldest speech on the page.");
   }
-  else if (speechesArray[0].year > speechesArray[1].year === speechesArray[0].year > speechesArray[2].year) {
+  else if (speechesArray[0].year > speechesArray[1].year && speechesArray[0].year > speechesArray[2].year) {
     console.log("This is the most recent speech on the page.");
   }
   else {
@@ -117,10 +117,11 @@ document.getElementById('BtnGhandi').addEventListener('click', function(){
   }
 
   //oldest
-    if (speechesArray[1].year < speechesArray[0].year === speechesArray[1].year < speechesArray[2].year) {
+
+    if (speechesArray[1].year < speechesArray[0].year && speechesArray[1].year < speechesArray[2].year) {
       console.log("This is the oldest speech on the page.");
     }
-    else if (speechesArray[1].year > speechesArray[0].year === speechesArray[1].year > speechesArray[2].year) {
+    else if (speechesArray[1].year > speechesArray[0].year && speechesArray[1].year > speechesArray[2].year) {
       console.log("This is the most recent speech on the page.");
     }
     else {
@@ -145,10 +146,10 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   }
 
   //oldest
-    if (speechesArray[2].year < speechesArray[1].year === speechesArray[2].year < speechesArray[0].year) {
+    if (speechesArray[2].year < speechesArray[1].year && speechesArray[2].year < speechesArray[0].year) {
       console.log("This is the oldest speech on the page.");
     }
-    else if (speechesArray[2].year > speechesArray[1].year === speechesArray[2].year > speechesArray[0].year) {
+    else if (speechesArray[2].year > speechesArray[1].year && speechesArray[2].year > speechesArray[0].year) {
       console.log("This is the most recent speech on the page.");
     }
     else {
