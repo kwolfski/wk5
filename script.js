@@ -8,37 +8,63 @@ var churchillSpeech = {
       'yearIsBCE': false,
       'authorAge': '66'
     },
-var ghandiSpeech = {
+
+    ghandiSpeech = {
       'author': 'Ghandi',
       'year': 1942,
       'yearIsBCE': false,
       'authorAge': '73'
     },
-var demosthenesSpeech = {
+
+    demosthenesSpeech = {
       'author': 'Demosthenes',
       'year': 342,
       'yearIsBCE': true,
       'authorAge': '42'
     },
 
-var userName = {
-  window.prompt("What's your name?");
-
-}
-
     speechesArray = [churchillSpeech, ghandiSpeech, demosthenesSpeech];
+
+var user = window.prompt("What's your name?");
+
+
+
+
+
 
     //When the page loads, use the window.prompt() command to ask for the user’s name. When the user responds, use a conditional to check that the type of the returned value is a string and that it is not equal to a blank string
     //(a blank string in JavaScript is expressed like this “”). If the user has entered a non-blank string, display this in the console: Hi [user’s name]!
 
-    if (typeof userName === "string" && userName.length !== 1) {
-      console.log("Hi " + userName + "!");
-    } else {
+    if (typeof user === "string" && user.length !== 1) {
+      console.log("Hi " + user + "!");
+    }
+    else {
       console.log("OK, I'll just call you User.");
     };
 
+    //You may notice that a new property of “authorAge” has been added to each of the speech objects. We are going to use the “Donate” button to ask the user which author is their favorite and then display the age of the specified author.
+    //To do this, start by using another window.prompt() command to ask the user’s favorite author when the “Donate” button is clicked. Then use a SWITCH statement to check which author name they entered.
+    //Display something like this after the user provides their answer:
+
+    //[author name] was [author age] during this speech.
+
 document.getElementById('BtnDonate').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Donate" button.
+  var answer = window.prompt("Who is your favorite author: Churchill, Ghandi, Demosthenes?");
+switch (answer) {
+  case "Churchill" :
+    console.log('Churchill was 66 during this speech.')
+    break;
+
+  case "Ghandi" :
+    console.log('Ghandi was 73 during this speech.')
+    break;
+
+  case "Churchill" :
+    console.log('Demosthenes was 42 during this speech.')
+    break;
+    
+  default: console.log("You rebel!")
+}
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
