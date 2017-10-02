@@ -74,12 +74,10 @@ switch (answer) {
   });
 
 
-
-
 document.getElementById('BtnGhandi').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Ghandi" button.
+  console.log("This speech was written by" + speechesArray[1].author + "in" + speechesArray[1].year + ".");
 });
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Demosthenes" button.
+  console.log("This speech was written by" + speechesArray[2].author + "in" + speechesArray[2].year + ".");
 });
